@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+        integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+        integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootsrtap.5.1.0.css">
+    <link rel="stylesheet" href="css/Style.css">
+    <link rel="stylesheet" href="node_modules/hover.css/css/hover.css">
+    <style>
+        /* body:after {
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(#600c68, #3b0366);
+            clip-path: circle(20% at right 50%);
+            z-index: 9;
+        }
+
+        @media (max-width: 767px) {
+            body:after {
+                position: absolute;
+                content: '';
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(#600c68, #3b0366);
+                clip-path: circle(20% at right 50%);
+                z-index: 9;
+            }
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="top-nav">
+
+        <div class="login">
+            <h5> <a href="#contact"> <i class="fa fa-envelope"></i> Contact </a></h5>
+            <h5> <a href="#"> <i class="fa fa-arrow-right"></i> SignIn/SignUp </a></h5>
+        </div>
+
+        <div class="contact">
+
+            <p> <i class="fa fa-phone"><a href="#"> +963 0997741497 </a></i> </p>
+            <ul class="list-unstyled">
+                <li><a href="#"> <i class="fa fa-facebook"></i> </a></li>
+                <li><a href="#"> <i class="fa fa-instagram"></i> </a></li>
+                <li><a href="#"> <i class="fa fa-twitter"></i> </a></li>
+                <li><a href="#"> <i class="fa fa-telegram"></i> </a></li>
+            </ul>
+        </div>
+
+    </div>
+
+
+    <header class="navbar">
+
+        <div class="container d-flex justify-content-between align-items-center">
+
+            <div class="logo">
+                <h3> <a href="index.html"> ANIME CLUB </a></h3>
+            </div>
+
+            <div class="form">
+                <form action="">
+
+                    <div class="search">
+                        <input type="text" name="search" id="search" placeholder="Search...">
+                        <i class="fa fa-search"></i>
+                    </div>
+                </form>
+            </div>
+
+
+            <div class="sidebar-btn">
+
+                <button type="button" class="btn">
+                    <span></span>
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="side-bar">
+            <div class="account d-flex justify-content-between align-items-center">
+                <img src="img/images.png" alt="">
+                <i class="fa fa-bell-o"></i>
+            </div>
+            <h3> Obada Kahlous </h3>
+            <hr>
+
+            <div class="nav">
+
+                <div class="item active">
+                    <h5> Latest Updates </h5>
+                    <p><i class="fa fa-fire"></i></p>
+                </div>
+                <div class="item">
+                    <h5> Anime list </h5>
+                    <p><i class="fa fa-list"></i></p>
+                </div>
+                <div class="item">
+                    <h5> Seasons </h5>
+                    <p><i class="fa fa-calendar"></i></p>
+                </div>
+                <div class="item">
+                    <h5> global Assessment </h5>
+                    <p><i class="fa fa-bar-chart"></i></p>
+                </div>
+                <div class="item">
+                    <h5> Arabic Assessment </h5>
+                    <p><i class="fa fa-bar-chart"></i></p>
+                </div>
+                <div class="item">
+                    <a href="my-list.html">
+                        <h5> My List </h5>
+                    </a>
+                    <p><i class="fa fa-align-justify"></i></p>
+                </div>
+                <div class="item">
+                    <h5> My favorite anime </h5>
+                    <p><i class="fa fa-heart"></i></p>
+                </div>
+                <div class="item">
+                    <h5> Recent Views </h5>
+                    <p><i class="fa fa-clock-o"></i></p>
+                </div>
+                <div class="item">
+                    <h5> Settings </h5>
+                    <p><i class="fa fa-cog"></i></p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <section class="info my-3 my-3">
+
+
+        <div class="info-the-anime">
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="col-md-3 col-sm-6 col-6 image">
+                        <img src="img/part2.png" alt="">
+                    </div>
+
+                    <div class="col-md-9 col-sm-12 col-12 desc">
+                        <div>
+                            <h1 class="text-white mb-3"> Attack On Titan </h1>
+                            <p class="lead text-light mb-3"> Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                Omnis
+                                ab,
+                                quisquam obcaecati dolores maxime earum dolor nobis at esse nemo? Tenetur nisi incidunt
+                                magni quam ea ratione? Accusantium, doloribus enim. </p>
+                            <span class="text-white"> IMDP 9.7 <i class="fa fa-star"></i> </span>
+                            <div class="add-your-rate">
+                                <p class="add-rate"> Add your reate
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </p>
+                            </div>
+                            <ul class="list-unstyled">
+                                <li class=""> Action </li>
+                                <li class=""> Horror </li>
+                                <li class=""> Historical </li>
+                                <li class=""> Shonen </li>
+                                <li class=""> Demons </li>
+                            </ul>
+
+                        </div>
+                    </div>
+
+                </div>
+                <ul class="list-unstyled">
+                    <button class="list-btn"> <i class="fa fa-play"></i> </button>
+                    <button class="add-btn"> <i class="fa fa-plus"></i> </button>
+                </ul>
+            </div>
+        </div>
+
+        <div class="overlay"></div>
+    </section>
+
+
+
+    <section class="animes">
+
+        <div class="container">
+
+            <h3 class="text-white"> Similar Anime </h3>
+
+            <div class="row">
+                <div class="col-lg-2 col-md-3 col-sm-4 col-4 col-no-padding col-mobile-no-padding">
+                    <a href="#">
+                        <div class="type-anime">
+                            <div class="watch">
+                                <img src="img/part1.png" class="rounded" alt="">
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+
+                <div class="col-lg-2 col-md-3 col-sm-4 col-4 col-no-padding col-mobile-no-padding">
+                    <a href="#">
+                        <div class="type-anime">
+                            <div class="watch">
+                                <img src="img/part3.png" class="rounded" alt="">
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+
+                <div class="col-lg-2 col-md-3 col-sm-4 col-4 col-no-padding col-mobile-no-padding">
+                    <a href="#">
+                        <div class="type-anime">
+                            <div class="watch">
+                                <img src="img/part4.png" class="rounded" alt="">
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <footer class="py-4 bg-dark">
+        <div class="container d-flex justify-content-between align-items-center">
+            <h6 class="text-white"> CopyRight <i class="fa fa-copyright"></i> 2021 </h6>
+            <ul class="list-unstyled">
+
+                <!-- <li> <i class="fa fa-user"></i> </li> -->
+                <!-- <li> <i class="fa fa-user"></i> </li>
+                <li> <i class="fa fa-user"></i> </li>
+                <li> <i class="fa fa-user"></i> </li> -->
+
+            </ul>
+            <h6 class="text-white"> Designed By Obada Kahlous </h6>
+        </div>
+    </footer>
+
+    <script src="js/boostrap.5.1.0.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+        integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/typed.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("header button").on("click", function () {
+                $(".side-bar").toggleClass("active");
+                $(".btn").toggleClass("toggle");
+            })
+        })
+    </script>
+</body>
+
+</html>

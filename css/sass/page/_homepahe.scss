@@ -1,0 +1,519 @@
+/*******************************    start header    *******************************/
+.top-section{
+    height: 650px;
+    width: 100%;
+    position: relative;
+    background: url(../img/animy.png) no-repeat center center;
+    background-size: cover;
+    overflow: hidden;
+    z-index: 2;
+    .container{
+        h3{
+            font-size: 40px;
+        }
+        h4{
+            font-size: 25px;
+        }
+        h5{
+            margin-top: 20px;
+            margin-bottom: 10px;
+            color: $color-three;
+        }
+        p{
+            line-height: 1.6;
+            font-size: 20px;
+        }
+    }
+
+    @media (max-width : 767px){
+        .container{
+            h3{
+                font-size: 25px;
+                margin-bottom: 0;
+            }
+            h4{
+                font-size: 18px;
+            }
+            p{
+                font-size: 14px;
+            }
+        }
+    }
+    img{
+        margin-top: 50px;
+        width:400px;
+    }
+}
+/*******************************    end header    *******************************/
+
+
+
+/*******************************    start secound section    *******************************/
+.secound-section{
+    overflow: hidden;
+    .anime{
+        position: relative;
+        cursor: pointer;
+        height: 200px;
+        margin-bottom: 30px;
+        img{
+            width: 110px;
+            height: 110px;
+            transition: 0.3s;
+            &:hover{
+                opacity: 0.4;
+            }
+        }
+        .text{
+            color: #fff;
+            margin-left: 15px;
+            margin-top: -10px;
+            h6{
+                font-size: 14px;
+                color: #ccc;
+            }
+        }
+        .Watch{
+            position: absolute;
+            top: 32%;
+            left: 43%;
+            i{
+                font-size: 18px;
+                color: rebeccapurple;
+            }
+        }
+    }  
+    .top-anime .slick-center .anime {
+        transition: 0.4s;
+        margin: 20px ;
+    }
+    .container .anime img {
+        margin: 20px;
+    }
+    .top-anime .slick-center .anime img {
+        margin: 20px;
+       
+    }
+    .top-anime .slick-center img{
+        transform: scale(1.14);
+        transition: 0.8s;
+    }
+    button.slick-next.slick-arrow {
+        position: absolute;
+        top: 35%;
+        left: 50%;
+    }
+    button.slick-prev.slick-arrow {
+        position: absolute;
+        top: 35%;
+        left: -50%;
+    }
+
+}
+/*******************************    start secound section    *******************************/
+
+
+
+
+/*******************************    start section comming soon    *******************************/
+
+.comming-soon{
+    h3{
+        position: relative;
+        transition: 0.4s;
+        z-index: 999;
+        &:after{
+            position: absolute;
+            content: '';
+            width: 30px;
+            height: 5px;
+            left: 50%;
+            bottom : -10px;
+            background-color: blueviolet;
+            z-index: -1;
+            transition: 0.4s ease-in-out;
+            animation: comming 2s infinite alternate;
+        }
+    }
+    .soon{
+        img{
+            margin: auto;
+            border-radius: 50%;
+        }
+        ul{
+            margin: 20px auto;
+            li{
+                margin: 20px;
+                color: #fff;
+                background-color: #410882;
+                width: 80px;
+                height: 80px;
+                border-radius: 5px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                p{
+                    padding: 0;
+                    margin: 0;
+                    font-weight: 700;
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+}
+
+@keyframes comming{
+    0%{
+        left : 50%;
+        width: 10px;
+        box-shadow: 0 0 10px 0 rgba(150,10,254,0.5), 0 0 10px 0 rgba(150,10,254,0.5);
+    }
+    50%{
+        left : 60%;
+        width: 30px;
+        box-shadow: none;
+    }
+    100%{
+        left : 40%;
+        width: 10px;
+        box-shadow: 0 0 10px 0 rgba(150,10,254,0.5), 0 0 10px 0 rgba(150,10,254,0.5);
+    }
+}
+
+/*******************************    ens section comming soon    *******************************/
+
+
+
+
+
+/*******************************    start Section last-animy    *******************************/
+section.last-animy{
+    margin-bottom: 40px;
+    h3{
+        width: fit-content;
+        position: relative;
+        span{
+            color: $color-three;
+        }
+        &::before{
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 40%;
+            height: 4px;
+            background-color: $color-three
+        }
+    }
+    .animy-added{
+        .animy-last{
+            .animy{
+                width: 100%;
+                height: 180px;
+                position: relative;
+                margin-bottom: 20px;
+                img{
+                    width: 100%;
+                    height: 140px;
+                }
+                .text{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    color: #fff;
+                    h6{
+                        font-size: 14px;
+                        color: #fff;
+                    }
+                    p{
+                        font-size: 14px;
+                        margin-bottom: 8px;
+                        i{
+                            color: yellow;
+                            margin-right: 5px;
+                        }
+                    }
+                }
+
+                .add{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    position: absolute;
+                    width: 0;
+                    height: calc(100% - 40px);
+                    left: 0;
+                    top: 0;
+                    background-color: rgba(0,0,0,0.4);
+                    transition: 0.5s;
+                    overflow: hidden;
+                    i{
+                        color: #fff;
+                        font-size: 20px;
+                        margin: 10px;
+                        margin-top: 25px;
+                        transition: 0.5s;
+                        &:nth-child(1):hover{
+                            color: rgb(216, 14, 14);
+                        }
+                        &:nth-child(2):hover{
+                            color: $color-three;
+                        }
+                    }
+                }
+                &:hover .add{
+                    width: 100%;
+                }
+            }
+        }
+    }
+    @media (max-width : 767px){
+        h3{
+            font-size: 18px;
+        }
+        p{
+            font-size: 16px;
+        }
+    }
+    
+}  
+/*******************************    End Section last-animy   *******************************/
+
+
+
+
+/*******************************    start Section fixed-anime   *******************************/
+section.fixed-anime{
+    margin-bottom: 30px;
+    h3{
+        width: fit-content;
+        position: relative;
+        span{
+            color: $color-three;
+        }
+        &::before{
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 40%;
+            height: 4px;
+            background-color: $color-three
+        }
+    }
+
+    .fix-anime{
+        .anime{
+            margin-bottom: 10px;
+            position: relative;
+            width: 100%;
+            img{
+                width: 100%;
+                height: 240px;
+                margin-bottom: 5px;
+                transition: 0.5s;
+                &:hover{
+                    opacity: 0.4;
+                }
+            }
+            &::before{
+                content: "Displays";
+                position: absolute;
+                top: 10px;
+                left: 0;
+                padding: 5px;
+                width: 80px;
+                text-align: center;
+                background-color: rgba(150,10,254,0.6);
+                border-radius: 0 12px 12px 0;
+                z-index: 3;
+            }
+            .text{
+                h6{
+                    color: light;
+                }
+                p{
+                    color: #ccc;
+                }
+            }
+        }
+    }
+
+    @media (max-width : 767px){
+        h3{
+            font-size: 18px;
+        }
+        p{
+            font-size: 16px;
+        }
+    }
+}
+
+
+/*******************************    start Section type-anime   *******************************/
+.type-anime{
+
+    .container{
+        h3{
+            width: fit-content;
+            position: relative;
+            span{
+                color: $color-three;
+            }
+            &::before{
+                content: '';
+                position: absolute;
+                bottom: -10px;
+                left: 0;
+                width: 40%;
+                height: 4px;
+                background-color: $color-three
+            }
+        }
+        
+        .types{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            ul{
+                margin-top: 30px;
+                margin-bottom: 30px;
+                li.btn-hover{
+                    margin: 0;
+                    color: #fff;
+                    padding: 10px 20px;
+                    border-radius: 5px;
+                    border: 1px solid $color-three;
+                    cursor: pointer;
+                    position: relative;
+                    &:after{
+                        content: "";
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 0;
+                        height: 0;
+                        background-color: $color-three;
+                        transition: 0.3s ease-out;
+                        z-index: -1;
+                    }
+                    &:before{
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        width: 0;
+                        height: 0;
+                        background-color: $color-three;
+                        transition: 0.3s ease-out;
+                        z-index: -1;
+                    }
+                    &:hover:after{
+                        width: 100%;
+                        height: 50%;
+                    }
+                    &:hover:before{
+                        width: 100%;
+                        height: 50%;
+                    }
+                }
+                li.active{
+                    background-color: $color-three;
+                    box-shadow: 0 0 20px rgba(150,10,254,0.5) , 0 0 30px rgba(150,10,254,0.5);
+                }
+            }
+            
+        }
+        .type-anime{    
+            img{
+                width: 100%;
+                height: 240px;
+            }
+            .watch{
+                position: relative;
+                transition: 0.6s;
+                img{
+                    transition: 0.3s;
+                    &:hover{
+                        opacity: 0.3;
+                    }
+                }
+                .icon{
+                    display: none;
+                    position: absolute;
+                    top : 50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                    i{
+                        color: $color-three;
+                        font-size: 30px;
+                    }
+                }
+                &:hover .icon{
+                    display: block;
+                }
+            }
+    
+            .text{
+                i{
+                    color: yellow;
+                }
+            }
+        }
+    }
+   @media(max-width : 767px){
+    .container{
+        h3{
+            font-size: 18px;
+        }
+        p{
+            font-size: 14px;
+        }
+        .types{
+            ul{
+                margin: 30px 0;
+                padding: 0;
+                li{
+                    margin: 0;
+                    border-radius: 0;
+                    padding: 3px 6px;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+
+   .itembox.hide{
+       display: none;
+   }
+
+}
+
+
+
+/*******************************    End Section type-animy   *******************************/
+
+
+
+/*******************************    End Section fixed-anime   *******************************/
+.alert{
+    background-color: $color-one;
+    border: 1px solid $color-three;
+}
+
+.anime{
+    overflow: hidden;
+    img:hover{
+        transition: 0.3s;
+        transform: scale(1.1) rotate(5deg);
+    }
+}
+

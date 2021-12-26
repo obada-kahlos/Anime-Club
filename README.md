@@ -1,1 +1,1 @@
-# Anime-Club
+# Anime

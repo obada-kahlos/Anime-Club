@@ -1,0 +1,1598 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #110E17;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #fff;
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+textarea:focus {
+  border: none;
+  outline: none;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: -1;
+}
+
+li {
+  list-style: none;
+  display: inline-block;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #960AFE;
+}
+
+.top-nav {
+  width: 100%;
+  height: 50px;
+  background-color: #960AFE;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.top-nav .login h5 {
+  color: #ddd;
+  display: inline;
+  margin-left: 20px;
+}
+.top-nav .login h5 a {
+  color: #ddd;
+}
+.top-nav .contact p {
+  color: #ddd;
+  display: inline;
+  font-size: 18px;
+  margin-right: 20px;
+}
+.top-nav .contact ul {
+  display: inline;
+}
+.top-nav .contact ul li {
+  display: inline;
+  width: 20px;
+  height: 20px;
+  color: #fff;
+  margin-right: 20px;
+}
+@media (max-width: 767px) {
+  .top-nav {
+    display: none;
+  }
+}
+
+header.navbar {
+  background-color: rgba(42, 48, 60, 0.9);
+  width: 100%;
+  height: 70px;
+  z-index: 999;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid #960AFE;
+}
+@media (max-width: 767px) {
+  header.navbar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+}
+header.navbar .container {
+  color: #fff;
+}
+header.navbar .container .logo h3 {
+  color: #fff;
+  font-size: 26px;
+}
+header.navbar .container .logo h3::first-letter {
+  font-size: 33px;
+  color: #960AFE;
+}
+@media (max-width: 767px) {
+  header.navbar .container .logo h3 {
+    font-size: 16px;
+  }
+}
+header.navbar .container .form form .search {
+  position: relative;
+}
+header.navbar .container .form form .search input[type=text] {
+  width: 500px;
+  padding: 4px 20px;
+  background-color: #2A303C;
+  color: #fff;
+  border: 1px solid #960AFE;
+  border-radius: 4px;
+}
+header.navbar .container .form form .search i {
+  position: absolute;
+  color: #960AFE;
+  top: 8px;
+  right: 10px;
+  cursor: pointer;
+}
+@media (max-width: 767px) {
+  header.navbar .container .form form .search input[type=text] {
+    width: 200px;
+    margin-top: 3px;
+  }
+  header.navbar .container .form form .search i {
+    position: absolute;
+    color: #960AFE;
+    top: 11px;
+  }
+}
+@media (min-width: 767px) {
+  header.navbar .container .form form .search input[type=text] {
+    width: 300px;
+  }
+}
+@media (min-width: 1024px) {
+  header.navbar .container .form form .search input[type=text] {
+    width: 500px;
+  }
+}
+header.navbar .container .sidebar-btn .btn {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  background-color: none;
+}
+header.navbar .container .sidebar-btn .btn span {
+  position: relative;
+  display: block;
+  width: 35px;
+  height: 3px;
+  background-color: #fff;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+header.navbar .container .sidebar-btn .btn span:before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+header.navbar .container .sidebar-btn .btn span:after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+header.navbar .container .sidebar-btn .btn:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+header.navbar .container .sidebar-btn .btn.toggle span {
+  background: transparent;
+}
+header.navbar .container .sidebar-btn .btn.toggle span::before {
+  top: 0;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+header.navbar .container .sidebar-btn .btn.toggle span::after {
+  top: 0;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+@media (max-width: 767px) {
+  header.navbar .container .sidebar-btn .btn {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    background-color: none;
+    margin-right: 5px;
+  }
+  header.navbar .container .sidebar-btn .btn span {
+    width: 25px;
+  }
+}
+header.navbar .side-bar {
+  position: relative;
+  z-index: 999;
+  overflow: hidden;
+  height: 100%;
+  position: fixed;
+  top: 50px;
+  left: -350px;
+  background-color: rgba(42, 48, 60, 0.9);
+  width: 250px;
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+}
+header.navbar .side-bar .account {
+  margin: 10px;
+  margin-bottom: 0;
+}
+header.navbar .side-bar .account img {
+  width: 80px;
+  height: 80px;
+  margin: 10px;
+  border-radius: 50%;
+}
+header.navbar .side-bar .account i {
+  font-size: 22px;
+  cursor: pointer;
+  color: #fff;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+header.navbar .side-bar .account i:hover {
+  color: #960AFE;
+}
+header.navbar .side-bar h3 {
+  color: #fff;
+  margin-top: -5px;
+  margin-bottom: 15px;
+  font-size: 20px;
+  margin-left: 18px;
+}
+header.navbar .side-bar div.nav .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  cursor: pointer;
+  padding: 10px;
+  margin: 0;
+  margin-bottom: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+header.navbar .side-bar div.nav .item h5 {
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 0;
+}
+header.navbar .side-bar div.nav .item p {
+  margin: 0;
+}
+header.navbar .side-bar div.nav .item i {
+  color: #fff;
+  font-size: 16px;
+}
+header.navbar .side-bar div.nav .item:nth-child(3) {
+  border-bottom: 1px solid #ddd;
+}
+header.navbar .side-bar div.nav .item:nth-child(5) {
+  border-bottom: 1px solid #ddd;
+}
+header.navbar .side-bar div.nav .item:hover {
+  background-color: #960AFE;
+}
+header.navbar .side-bar div.nav .item:hover h5, header.navbar .side-bar div.nav .item:hover i {
+  color: #fff;
+}
+header.navbar .side-bar div.nav .item.active {
+  background-color: #960AFE;
+}
+header.navbar .side-bar div.nav .item.active h5, header.navbar .side-bar div.nav .item.active i {
+  color: #fff;
+}
+header.navbar .active {
+  left: 0;
+}
+
+.slide-down {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.side-bar-scroll {
+  position: fixed;
+  top: 70px;
+}
+
+/*******************************    start header    *******************************/
+.top-section {
+  height: 650px;
+  width: 100%;
+  position: relative;
+  background: url(../img/animy.png) no-repeat center center;
+  background-size: cover;
+  overflow: hidden;
+  z-index: 2;
+}
+.top-section .container h3 {
+  font-size: 40px;
+}
+.top-section .container h4 {
+  font-size: 25px;
+}
+.top-section .container h5 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #960AFE;
+}
+.top-section .container p {
+  line-height: 1.6;
+  font-size: 20px;
+}
+@media (max-width: 767px) {
+  .top-section .container h3 {
+    font-size: 25px;
+    margin-bottom: 0;
+  }
+  .top-section .container h4 {
+    font-size: 18px;
+  }
+  .top-section .container p {
+    font-size: 14px;
+  }
+}
+.top-section img {
+  margin-top: 50px;
+  width: 400px;
+}
+
+/*******************************    end header    *******************************/
+/*******************************    start secound section    *******************************/
+.secound-section {
+  overflow: hidden;
+}
+.secound-section .anime {
+  position: relative;
+  cursor: pointer;
+  height: 200px;
+  margin-bottom: 30px;
+}
+.secound-section .anime img {
+  width: 110px;
+  height: 110px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.secound-section .anime img:hover {
+  opacity: 0.4;
+}
+.secound-section .anime .text {
+  color: #fff;
+  margin-left: 15px;
+  margin-top: -10px;
+}
+.secound-section .anime .text h6 {
+  font-size: 14px;
+  color: #ccc;
+}
+.secound-section .anime .Watch {
+  position: absolute;
+  top: 32%;
+  left: 43%;
+}
+.secound-section .anime .Watch i {
+  font-size: 18px;
+  color: rebeccapurple;
+}
+.secound-section .top-anime .slick-center .anime {
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  margin: 20px;
+}
+.secound-section .container .anime img {
+  margin: 20px;
+}
+.secound-section .top-anime .slick-center .anime img {
+  margin: 20px;
+}
+.secound-section .top-anime .slick-center img {
+  -webkit-transform: scale(1.14);
+          transform: scale(1.14);
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+}
+.secound-section button.slick-next.slick-arrow {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+}
+.secound-section button.slick-prev.slick-arrow {
+  position: absolute;
+  top: 35%;
+  left: -50%;
+}
+
+/*******************************    start secound section    *******************************/
+/*******************************    start section comming soon    *******************************/
+.comming-soon h3 {
+  position: relative;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  z-index: 999;
+}
+.comming-soon h3:after {
+  position: absolute;
+  content: "";
+  width: 30px;
+  height: 5px;
+  left: 50%;
+  bottom: -10px;
+  background-color: blueviolet;
+  z-index: -1;
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+  -webkit-animation: comming 2s infinite alternate;
+          animation: comming 2s infinite alternate;
+}
+.comming-soon .soon img {
+  margin: auto;
+  border-radius: 50%;
+}
+.comming-soon .soon ul {
+  margin: 20px auto;
+}
+.comming-soon .soon ul li {
+  margin: 20px;
+  color: #fff;
+  background-color: #410882;
+  width: 80px;
+  height: 80px;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.comming-soon .soon ul li p {
+  padding: 0;
+  margin: 0;
+  font-weight: 700;
+  font-size: 30px;
+}
+
+@-webkit-keyframes comming {
+  0% {
+    left: 50%;
+    width: 10px;
+    -webkit-box-shadow: 0 0 10px 0 rgba(150, 10, 254, 0.5), 0 0 10px 0 rgba(150, 10, 254, 0.5);
+            box-shadow: 0 0 10px 0 rgba(150, 10, 254, 0.5), 0 0 10px 0 rgba(150, 10, 254, 0.5);
+  }
+  50% {
+    left: 60%;
+    width: 30px;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  100% {
+    left: 40%;
+    width: 10px;
+    -webkit-box-shadow: 0 0 10px 0 rgba(150, 10, 254, 0.5), 0 0 10px 0 rgba(150, 10, 254, 0.5);
+            box-shadow: 0 0 10px 0 rgba(150, 10, 254, 0.5), 0 0 10px 0 rgba(150, 10, 254, 0.5);
+  }
+}
+
+@keyframes comming {
+  0% {
+    left: 50%;
+    width: 10px;
+    -webkit-box-shadow: 0 0 10px 0 rgba(150, 10, 254, 0.5), 0 0 10px 0 rgba(150, 10, 254, 0.5);
+            box-shadow: 0 0 10px 0 rgba(150, 10, 254, 0.5), 0 0 10px 0 rgba(150, 10, 254, 0.5);
+  }
+  50% {
+    left: 60%;
+    width: 30px;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  100% {
+    left: 40%;
+    width: 10px;
+    -webkit-box-shadow: 0 0 10px 0 rgba(150, 10, 254, 0.5), 0 0 10px 0 rgba(150, 10, 254, 0.5);
+            box-shadow: 0 0 10px 0 rgba(150, 10, 254, 0.5), 0 0 10px 0 rgba(150, 10, 254, 0.5);
+  }
+}
+/*******************************    ens section comming soon    *******************************/
+/*******************************    start Section last-animy    *******************************/
+section.last-animy {
+  margin-bottom: 40px;
+}
+section.last-animy h3 {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+}
+section.last-animy h3 span {
+  color: #960AFE;
+}
+section.last-animy h3::before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 40%;
+  height: 4px;
+  background-color: #960AFE;
+}
+section.last-animy .animy-added .animy-last .animy {
+  width: 100%;
+  height: 180px;
+  position: relative;
+  margin-bottom: 20px;
+}
+section.last-animy .animy-added .animy-last .animy img {
+  width: 100%;
+  height: 140px;
+}
+section.last-animy .animy-added .animy-last .animy .text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: #fff;
+}
+section.last-animy .animy-added .animy-last .animy .text h6 {
+  font-size: 14px;
+  color: #fff;
+}
+section.last-animy .animy-added .animy-last .animy .text p {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+section.last-animy .animy-added .animy-last .animy .text p i {
+  color: yellow;
+  margin-right: 5px;
+}
+section.last-animy .animy-added .animy-last .animy .add {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  width: 0;
+  height: calc(100% - 40px);
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  overflow: hidden;
+}
+section.last-animy .animy-added .animy-last .animy .add i {
+  color: #fff;
+  font-size: 20px;
+  margin: 10px;
+  margin-top: 25px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+section.last-animy .animy-added .animy-last .animy .add i:nth-child(1):hover {
+  color: #d80e0e;
+}
+section.last-animy .animy-added .animy-last .animy .add i:nth-child(2):hover {
+  color: #960AFE;
+}
+section.last-animy .animy-added .animy-last .animy:hover .add {
+  width: 100%;
+}
+@media (max-width: 767px) {
+  section.last-animy h3 {
+    font-size: 18px;
+  }
+  section.last-animy p {
+    font-size: 16px;
+  }
+}
+
+/*******************************    End Section last-animy   *******************************/
+/*******************************    start Section fixed-anime   *******************************/
+section.fixed-anime {
+  margin-bottom: 30px;
+}
+section.fixed-anime h3 {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+}
+section.fixed-anime h3 span {
+  color: #960AFE;
+}
+section.fixed-anime h3::before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 40%;
+  height: 4px;
+  background-color: #960AFE;
+}
+section.fixed-anime .fix-anime .anime {
+  margin-bottom: 10px;
+  position: relative;
+  width: 100%;
+}
+section.fixed-anime .fix-anime .anime img {
+  width: 100%;
+  height: 240px;
+  margin-bottom: 5px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+section.fixed-anime .fix-anime .anime img:hover {
+  opacity: 0.4;
+}
+section.fixed-anime .fix-anime .anime::before {
+  content: "Displays";
+  position: absolute;
+  top: 10px;
+  left: 0;
+  padding: 5px;
+  width: 80px;
+  text-align: center;
+  background-color: rgba(150, 10, 254, 0.6);
+  border-radius: 0 12px 12px 0;
+  z-index: 3;
+}
+section.fixed-anime .fix-anime .anime .text h6 {
+  color: light;
+}
+section.fixed-anime .fix-anime .anime .text p {
+  color: #ccc;
+}
+@media (max-width: 767px) {
+  section.fixed-anime h3 {
+    font-size: 18px;
+  }
+  section.fixed-anime p {
+    font-size: 16px;
+  }
+}
+
+/*******************************    start Section type-anime   *******************************/
+.type-anime .container h3 {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+}
+.type-anime .container h3 span {
+  color: #960AFE;
+}
+.type-anime .container h3::before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 40%;
+  height: 4px;
+  background-color: #960AFE;
+}
+.type-anime .container .types {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.type-anime .container .types ul {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.type-anime .container .types ul li.btn-hover {
+  margin: 0;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: 1px solid #960AFE;
+  cursor: pointer;
+  position: relative;
+}
+.type-anime .container .types ul li.btn-hover:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  background-color: #960AFE;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+  z-index: -1;
+}
+.type-anime .container .types ul li.btn-hover:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  background-color: #960AFE;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+  z-index: -1;
+}
+.type-anime .container .types ul li.btn-hover:hover:after {
+  width: 100%;
+  height: 50%;
+}
+.type-anime .container .types ul li.btn-hover:hover:before {
+  width: 100%;
+  height: 50%;
+}
+.type-anime .container .types ul li.active {
+  background-color: #960AFE;
+  -webkit-box-shadow: 0 0 20px rgba(150, 10, 254, 0.5), 0 0 30px rgba(150, 10, 254, 0.5);
+          box-shadow: 0 0 20px rgba(150, 10, 254, 0.5), 0 0 30px rgba(150, 10, 254, 0.5);
+}
+.type-anime .container .type-anime img {
+  width: 100%;
+  height: 240px;
+}
+.type-anime .container .type-anime .watch {
+  position: relative;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+}
+.type-anime .container .type-anime .watch img {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.type-anime .container .type-anime .watch img:hover {
+  opacity: 0.3;
+}
+.type-anime .container .type-anime .watch .icon {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.type-anime .container .type-anime .watch .icon i {
+  color: #960AFE;
+  font-size: 30px;
+}
+.type-anime .container .type-anime .watch:hover .icon {
+  display: block;
+}
+.type-anime .container .type-anime .text i {
+  color: yellow;
+}
+@media (max-width: 767px) {
+  .type-anime .container h3 {
+    font-size: 18px;
+  }
+  .type-anime .container p {
+    font-size: 14px;
+  }
+  .type-anime .container .types ul {
+    margin: 30px 0;
+    padding: 0;
+  }
+  .type-anime .container .types ul li {
+    margin: 0;
+    border-radius: 0;
+    padding: 3px 6px;
+    font-size: 14px;
+  }
+}
+.type-anime .itembox.hide {
+  display: none;
+}
+
+/*******************************    End Section type-animy   *******************************/
+/*******************************    End Section fixed-anime   *******************************/
+.alert {
+  background-color: #110E17;
+  border: 1px solid #960AFE;
+}
+
+.anime {
+  overflow: hidden;
+}
+.anime img:hover {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-transform: scale(1.1) rotate(5deg);
+          transform: scale(1.1) rotate(5deg);
+}
+
+section.contact .form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+section.contact .form form {
+  width: 60%;
+}
+section.contact .form form label {
+  display: block;
+  color: #fff;
+  margin-bottom: 10px;
+}
+section.contact .form form input {
+  display: block;
+  padding: 10px;
+  width: 80%;
+  margin-bottom: 10px;
+  border: 2px solid #960AFE;
+  background-color: #110E17;
+  border-radius: 10px;
+  color: #fff;
+}
+section.contact .form form textarea {
+  resize: none;
+  width: 80%;
+  padding: 10px;
+  color: #fff;
+  background-color: #110E17;
+  border: 2px solid #960AFE;
+  border-radius: 10px;
+  display: block;
+}
+section.contact .form .image {
+  width: 40%;
+  margin: 0 auto;
+}
+section.contact .form .image img {
+  width: 300px;
+  height: 300p;
+}
+@media (max-width: 767px) {
+  section.contact .form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  section.contact .form form {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  section.contact .form form input {
+    width: 100%;
+  }
+  section.contact .form form textarea {
+    width: 100%;
+  }
+  section.contact .form .image {
+    width: 100%;
+    margin-top: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+section.my-list-anime .list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 40px;
+}
+section.my-list-anime .list h3 {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+}
+section.my-list-anime .list h3 span {
+  color: #960AFE;
+}
+section.my-list-anime .list h3::before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 40%;
+  height: 4px;
+  background-color: #960AFE;
+}
+section.my-list-anime .list .list-btn {
+  width: 160px;
+  height: 40px;
+  color: #fff;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #960AFE;
+  border: none;
+  -webkit-box-shadow: 0 0 30px 0 rgba(209, 22, 209, 0.5), 0 0 50px 0 rgba(209, 22, 209, 0.5);
+          box-shadow: 0 0 30px 0 rgba(209, 22, 209, 0.5), 0 0 50px 0 rgba(209, 22, 209, 0.5);
+}
+section.my-list-anime .animes .anime {
+  margin-bottom: 20px;
+}
+section.my-list-anime .animes .anime .info {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+section.my-list-anime .animes .anime .info img {
+  width: 100%;
+  height: 240px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+section.my-list-anime .animes .anime .info .do {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  top: 0;
+  left: -100%;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+section.my-list-anime .animes .anime .info .do i {
+  font-size: 22px;
+  margin: 5px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+section.my-list-anime .animes .anime .info .do i:first-child:hover {
+  color: red;
+}
+section.my-list-anime .animes .anime .info .do i:nth-child(2):hover {
+  color: #960AFE;
+  font-weight: bold;
+}
+section.my-list-anime .animes .anime .info:hover .do {
+  left: 0;
+}
+@media (max-width: 767px) {
+  section.my-list-anime .list h3 {
+    font-size: 20px;
+  }
+  section.my-list-anime .list .list-btn {
+    width: 140px;
+    height: 40px;
+    color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #960AFE;
+    border: none;
+    -webkit-box-shadow: 0 0 30px 0 rgba(209, 22, 209, 0.5), 0 0 50px 0 rgba(209, 22, 209, 0.5);
+            box-shadow: 0 0 30px 0 rgba(209, 22, 209, 0.5), 0 0 50px 0 rgba(209, 22, 209, 0.5);
+  }
+  section.my-list-anime .animes .anime .info img {
+    width: 100%;
+  }
+}
+
+.watch-anime .video {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 400px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.watch-anime .video i {
+  color: #fff;
+  font-size: 50px;
+  cursor: pointer;
+}
+.watch-anime .next-priv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px;
+}
+.watch-anime .next-priv button {
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+.watch-anime .next-priv button.next {
+  text-align: center;
+  color: #fff;
+  background-color: #960AFE;
+}
+.watch-anime .next-priv button.prive {
+  text-align: center;
+  color: #fff;
+  background-color: #110E17;
+  border: 1px solid #960AFE;
+}
+.watch-anime .dawonlad {
+  width: 100%;
+  height: 400px;
+  background-color: #181d22;
+  border-radius: 10px;
+  padding: 10px;
+}
+.watch-anime .dawonlad .select li {
+  width: 48%;
+  text-align: center;
+  padding: 10px;
+  border: 1px solid #960AFE;
+  border-radius: 5px;
+  color: #960AFE;
+  cursor: pointer;
+}
+.watch-anime .dawonlad .select li a {
+  cursor: pointer;
+  color: #960AFE;
+}
+.watch-anime .dawonlad .select li a span {
+  display: block;
+}
+.watch-anime .dawonlad .select li.active {
+  background-color: #960AFE;
+}
+.watch-anime .dawonlad .select li.active a {
+  color: #fff;
+}
+.watch-anime .dawonlad .download-list ul {
+  padding: 0;
+  margin: 0;
+}
+.watch-anime .dawonlad .download-list ul li {
+  margin: 0 0 40px 0;
+  padding: 0;
+  display: block;
+}
+.watch-anime .dawonlad .download-list ul li i {
+  float: right;
+  color: #960AFE;
+}
+
+section.info {
+  width: 100%;
+  height: auto;
+  background: url(../img/animy.png) no-repeat center center;
+  background-size: cover;
+  position: relative;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+section.info .info-the-anime {
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 999;
+}
+section.info .info-the-anime .image {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  margin-bottom: 20px;
+  height: 100%;
+}
+section.info .info-the-anime .image:after {
+  content: "مستمر";
+  position: absolute;
+  top: 0;
+  left: 12px;
+  z-index: 999;
+  background-color: rgba(209, 22, 209, 0.5);
+  color: #fff;
+  padding: 4px 20px;
+}
+section.info .info-the-anime .image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+section.info .info-the-anime .desc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+  margin-bottom: 5px;
+}
+section.info .info-the-anime .desc h1 {
+  font-size: 26px;
+}
+section.info .info-the-anime .desc p {
+  font-size: 18px;
+}
+section.info .info-the-anime .desc span {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-bottom: 2px solid #960AFE;
+}
+section.info .info-the-anime .desc span i {
+  color: yellow;
+}
+section.info .info-the-anime .desc .add-your-rate {
+  margin-top: 30px;
+}
+section.info .info-the-anime .desc .add-your-rate p {
+  color: #fff;
+}
+section.info .info-the-anime .desc .add-your-rate p i {
+  color: rgba(255, 255, 255, 0.1);
+  margin: 5px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  cursor: pointer;
+}
+section.info .info-the-anime .desc .add-your-rate p i:hover {
+  color: yellow;
+}
+section.info .info-the-anime .desc ul {
+  margin-top: 30px;
+}
+section.info .info-the-anime .desc ul li {
+  color: #fff;
+  margin-right: 5px;
+  padding: 5px 20px;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+@media (max-width: 767px) {
+  section.info .info-the-anime .desc ul li {
+    color: #fff;
+    margin-right: 0;
+    margin-top: 30px;
+    padding: 4px 4px;
+    border-radius: 5px;
+  }
+}
+section.info .overlay {
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+}
+section.info button {
+  padding: 10px 40px;
+  margin: 10px 0;
+  margin-right: 10px;
+  border-radius: 4px;
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.1);
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+}
+section.info button:hover {
+  background-color: #960AFE;
+  -webkit-box-shadow: 0 0 30px 0 rgba(209, 22, 209, 0.1), 0 0 50px 0 rgba(209, 22, 209, 0.2);
+          box-shadow: 0 0 30px 0 rgba(209, 22, 209, 0.1), 0 0 50px 0 rgba(209, 22, 209, 0.2);
+}
+
+.animes {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  position: relative;
+}
+.animes h3 {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+}
+.animes h3 span {
+  color: #960AFE;
+}
+.animes h3::before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 40%;
+  height: 4px;
+  background-color: #960AFE;
+}
+.animes .type-anime {
+  margin: 20px 0;
+}
+.animes .type-anime img {
+  width: 100%;
+  height: 240px;
+}
+@media (max-width: 767px) {
+  .animes .type-anime {
+    margin: 20px 0;
+  }
+  .animes .type-anime img {
+    width: 100%;
+    height: 240px;
+  }
+}
+
+.favorit {
+  margin: 30px 0;
+}
+.favorit h3 {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+}
+.favorit h3 span {
+  color: #960AFE;
+}
+.favorit h3::before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 40%;
+  height: 4px;
+  background-color: #960AFE;
+}
+.favorit .anime-character {
+  position: relative;
+}
+.favorit .anime-character img {
+  width: 100%;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  opacity: 0.9;
+}
+.favorit .anime-character img:hover {
+  opacity: 0.6;
+}
+.favorit .anime-character .info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 88%;
+  margin-left: 11px;
+  text-align: center;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.favorit .anime-character .info h5 {
+  margin: 0;
+  color: #fff;
+  font-size: 18px;
+}
+.favorit .anime-character .info p {
+  margin: 0;
+  color: #fff;
+  font-size: 16px;
+}
+.favorit .anime-character .info p i {
+  color: yellow;
+}
+@media (max-width: 767px) {
+  .favorit img {
+    width: 100%;
+    height: 240px;
+    margin: 20px 0;
+  }
+}
+
+.add {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+}
+.add button {
+  width: 120px;
+  text-align: center;
+  padding: 10px 15px;
+  color: #fff;
+  background-color: #960AFE;
+  -webkit-box-shadow: 0 0 30px 0 #960AFE, 0 0 30px 0 #960AFE;
+          box-shadow: 0 0 30px 0 #960AFE, 0 0 30px 0 #960AFE;
+  border-radius: 10px;
+}
+
+.top-section .container ul li {
+  display: inline-block;
+  margin: 20px;
+}
+.top-section .container ul li i {
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  color: #333;
+  border-radius: 50%;
+  font-size: 24px;
+  line-height: 60px;
+  -webkit-transition: 0.4s ease-out;
+  transition: 0.4s ease-out;
+  cursor: pointer;
+  color: #fff;
+}
+.top-section .container ul li .fa-facebook, .top-section .container ul li .fa-telegram {
+  border: 1px solid blue;
+}
+.top-section .container ul li .fa-facebook:hover, .top-section .container ul li .fa-telegram:hover {
+  background-color: blue;
+  border: 1px solid blue;
+}
+.top-section .container ul li .fa-telegram {
+  border: 1px solid #0088cc;
+}
+.top-section .container ul li .fa-telegram:hover {
+  background-color: #0088cc;
+  border: 1px solid #0088cc;
+}
+.top-section .container ul li .fa-youtube {
+  border: 1px solid #ff3300;
+}
+.top-section .container ul li .fa-youtube:hover {
+  background-color: #ff3300;
+}
+.top-section .container ul li .fa-instagram {
+  border: 1px solid #d116d1;
+}
+.top-section .container ul li .fa-instagram:hover {
+  background: radial-gradient(circle at 20% 130%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  color: #fff;
+}
+.top-section .container ul li .fa-whatsapp {
+  border: 1px solid #16cc10;
+}
+.top-section .container ul li .fa-whatsapp:hover {
+  background-color: #16cc10;
+}
+@media (max-width: 767px) {
+  .top-section .container ul li {
+    margin: 15px;
+  }
+  .top-section .container ul li i {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 16px;
+  }
+}
+
+.btn-hover {
+  color: #fff;
+  padding: 10px 40px;
+  margin: 20px 0;
+  border-radius: 5px;
+  background-color: #110E17;
+  border: 2px solid #960AFE;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+.btn-hover:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  background-color: #960AFE;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+  z-index: -1;
+}
+.btn-hover:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  background-color: #960AFE;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+  z-index: -1;
+}
+.btn-hover:hover:after {
+  width: 50%;
+  height: 100%;
+}
+.btn-hover:hover:before {
+  width: 50%;
+  height: 100%;
+}
+.btn-hover:hover {
+  -webkit-box-shadow: 0 0 30px 0 rgba(209, 22, 209, 0.3), 0 0 20px 0 rgba(209, 22, 209, 0.3);
+          box-shadow: 0 0 30px 0 rgba(209, 22, 209, 0.3), 0 0 20px 0 rgba(209, 22, 209, 0.3);
+}
+
+.btn-up {
+  position: fixed;
+  bottom: 30px;
+  right: -40px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 4px;
+  background-color: rgba(209, 22, 209, 0.5);
+  color: #fff;
+  cursor: pointer;
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+  overflow: hidden;
+}
+.btn-up::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #d116d1;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  z-index: -1;
+}
+.btn-up:hover::after {
+  width: 100%;
+}
+
+.show-btn-top {
+  right: 30px;
+}
+
+.show-more {
+  width: 100%;
+  padding: 10px;
+  color: #fff;
+  background-color: #960AFE;
+  margin: 30px 0;
+  border-radius: 8px;
+  background-image: -webkit-gradient(linear, left top, right top, from(#960AFE), color-stop(#5d04a2), to(#9548d0));
+  background-image: linear-gradient(to right, #960AFE, #5d04a2, #9548d0);
+  background-size: 400%;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+}
+
+.show-more:hover {
+  background-position: right;
+}
+
+.btn-sign {
+  padding: 8px 30px;
+  background-color: #960AFE;
+  color: #fff;
+  border-radius: 6px;
+  margin-top: 10px;
+}
+
+@media (max-width: 767px) {
+  footer h6 {
+    font-size: 14px;
+  }
+}

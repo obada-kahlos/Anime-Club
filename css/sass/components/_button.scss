@@ -1,0 +1,177 @@
+.top-section{
+    .container{
+        ul{
+            li{
+                display: inline-block;
+                margin: 20px;
+                i{
+                    width: 60px;
+                    height: 60px;
+                    text-align: center;
+                    color: #333;
+                    border-radius: 50%;
+                    font-size: 24px;
+                    line-height: 60px;
+                    transition: .4s ease-out;
+                    cursor: pointer;
+                    color:#fff;
+                }
+                .fa-facebook,.fa-telegram{
+                    border: 1px solid blue;
+                    &:hover{
+                        background-color: blue;
+                        border: 1px solid blue;
+                    }
+                }
+                .fa-telegram{
+                    border: 1px solid #0088cc;
+                    &:hover{
+                        background-color: #0088cc;
+                        border: 1px solid #0088cc;
+                    }
+                }
+                .fa-youtube{
+                    border: 1px solid rgb(255, 51, 0);
+                    &:hover{
+                        background-color: rgb(255, 51, 0);
+                    }
+                }
+                .fa-instagram{
+                    border: 1px solid rgb(209, 22, 209);
+                    &:hover{
+                        background: radial-gradient(circle at 20% 130%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+                        color: #fff;
+                    }
+                }
+                .fa-whatsapp{
+                    border: 1px solid rgb(22, 204, 16);
+                    &:hover{
+                        background-color:rgb(22, 204, 16);
+                    }
+                }
+            }
+            
+        }
+        @media (max-width : 767px){
+            ul{
+                li{
+                    margin: 15px;
+                    i{
+                        width: 50px;
+                        height: 50px;
+                        line-height: 50px;
+                        font-size : 16px
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
+///////////////////////////////////////////////////////////hover btn 
+.btn-hover{
+    color: #fff;
+    padding : 10px 40px;
+    margin: 20px 0;
+    border-radius: 5px;
+    background-color: $color-one;
+    border: 2px solid $color-three;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    &:after{
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 0;
+        background-color: $color-three;
+        transition: 0.3s ease-out;
+        z-index: -1;
+    }
+    &:before{
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 0;
+        height: 0;
+        background-color: $color-three;
+        transition: 0.3s ease-out;
+        z-index: -1;
+    }
+    &:hover:after{
+        width: 50%;
+        height: 100%;
+    }
+    &:hover:before{
+        width: 50%;
+        height: 100%;
+    }
+    &:hover{
+        box-shadow: 0 0 30px 0 rgba(209, 22, 209, 0.3) , 0 0 20px 0 rgba(209, 22, 209, 0.3);
+    }
+}
+
+
+// button to top 
+.btn-up{
+    position: fixed;
+    bottom: 30px;
+    right: -40px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 4px;
+    background-color: rgba(209, 22, 209,0.5);
+    color: #fff;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;;
+    overflow: hidden;
+    &::after{
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background-color: rgb(209, 22, 209);
+        transition: 0.4s;
+        z-index: -1;
+    }
+    &:hover::after{
+        width: 100%;
+    }
+}
+.show-btn-top{
+    right: 30px;
+}
+
+
+
+
+.show-more{
+    width: 100%;
+    padding: 10px;
+    color: #fff;
+    background-color: $color-three;
+    margin: 30px 0;
+    border-radius: 8px;
+    background-image: linear-gradient(to right, #960AFE, #5d04a2, #9548d0);
+	background-size: 400%;
+    transition: 1s ease-in-out;
+}
+.show-more:hover{
+	background-position: right;
+}
+
+.btn-sign{
+    padding: 8px 30px;
+    background-color: $color-three;
+    color: #fff;
+    border-radius: 6px;
+    margin-top: 10px;
+}

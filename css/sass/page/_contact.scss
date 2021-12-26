@@ -1,0 +1,71 @@
+section.contact{
+    .form{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        form{
+            width: 60%;
+            label{
+                display: block;
+                color: #fff;
+                margin-bottom: 10px;
+            }
+            input{
+                display: block;
+                padding: 10px;
+                width: 80%;
+                margin-bottom: 10px;
+                border: 2px solid $color-three;
+                background-color: $color-one;
+                border-radius: 10px;
+                color: #fff;
+            }
+            textarea{
+                resize: none;
+                width: 80%;
+                padding: 10px;
+                color: #fff;
+                background-color: $color-one;
+                border: 2px solid $color-three;
+                border-radius: 10px;
+                display: block;
+            }
+            
+        }
+        .image{
+            width: 40%;
+            margin: 0 auto;
+            img{
+                width: 300px;
+                height: 300p;
+
+            }
+        }
+    }
+
+
+    @media (max-width : 767px){
+        .form{
+            display: flex;
+            flex-direction: column;
+            form{
+                width: 100%;
+                margin-bottom: 30px;
+                input{
+                    width: 100%;
+                }
+                textarea{
+                    width: 100%;
+                }
+            }
+            .image{
+                width: 100%;
+                margin-top: 30px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+       
+    }
+}

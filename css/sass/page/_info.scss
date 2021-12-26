@@ -1,0 +1,157 @@
+section.info{
+    width: 100%;
+    height: auto;
+    background: url(../img/animy.png) no-repeat center center;
+    background-size: cover;
+    position: relative;
+    backdrop-filter: blur(10px);
+    .info-the-anime{
+        padding: 20px;
+        width: 100%;
+        height: 100%;
+        // background-color: rgba(255,255,255,0.1);
+        // backdrop-filter: blur(10px);
+        // border-radius: 20px;
+        // box-shadow: 0 0 30px 0 rgba(0,0,0,0.5),  0 0 30px 0 rgba(0,0,0,0.5);
+        position: relative;
+        z-index: 999;
+        .image{
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+            margin-bottom: 20px;
+            height: 100%;
+            &:after{
+                content: "مستمر";
+                position: absolute;
+                top: 0;
+                left: 12px;
+                z-index: 999;
+                background-color: rgba(209, 22, 209,0.5);
+                color: #fff;
+                padding: 4px 20px;
+                
+            }
+            img{
+                width: 100%;
+                height: 100%;
+                border-radius: 5px;
+            }
+
+        }
+        .desc{
+            display: flex;
+            justify-content: center;
+            align-items: end;
+            margin-bottom: 5px;
+            h1{
+                font-size: 26px;
+            }
+            p{
+                font-size: 18px;
+            }
+            span{
+                width: fit-content;
+                border-bottom: 2px solid $color-three;
+                i{
+                    color: yellow;
+                }
+            }
+            .add-your-rate{
+                margin-top: 30px;
+                p{
+                    color: #fff;
+                    i{
+                        color: rgba(255,255,255,0.1);
+                        margin: 5px;
+                        transition: 0.4s;
+                        cursor: pointer;
+                        &:hover{
+                            color: yellow;
+                        }
+                    }
+                }
+            }
+            ul{
+                margin-top: 30px;
+                li{
+                    color: #fff;
+                    margin-right: 5px;
+                    padding: 5px 20px;
+                    border-radius: 5px;
+                    background-color: rgba(255,255,255,0.1)
+                }
+            }
+
+        }
+        @media (max-width : 767px){
+            .desc{
+                ul{
+                    li{
+                        color: #fff;
+                        margin-right: 0;
+                        margin-top: 30px;
+                        padding: 4px 4px;
+                        border-radius: 5px;
+                    }
+                }
+            }
+        }
+    }
+    .overlay{
+
+        backdrop-filter: blur(2px);
+    }
+    button{
+        padding: 10px 40px;
+        margin: 10px 0;
+        margin-right: 10px;
+        border-radius: 4px;
+        color: #fff;
+        background-color: rgba(255,255,255,0.1);
+        transition: 0.3s ease-out;
+        &:hover{
+            background-color: $color-three;
+            box-shadow: 0 0 30px 0 rgba(209, 22, 209,0.1) ,  0 0 50px 0 rgba(209, 22, 209,0.2);
+        }
+    }
+}
+
+.animes{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    position: relative;
+    h3{
+        width: fit-content;
+        position: relative;
+        span{
+            color: $color-three;
+        }
+        &::before{
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 40%;
+            height: 4px;
+            background-color: $color-three;
+        }
+    }
+    .type-anime{
+        margin: 20px 0;
+        img{
+            width: 100%;
+            height: 240px;
+        }
+    }
+
+    @media (max-width : 767px){
+        .type-anime{
+            margin: 20px 0;
+            img{
+                width: 100%;
+                height: 240px;
+            }
+        }
+    }
+}
