@@ -477,34 +477,35 @@ header.navbar .active {
 /*******************************    start secound section    *******************************/
 /*******************************    start section comming soon    *******************************/
 .comming-soon h3 {
-  position: relative;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-  z-index: 999;
+  padding: 10px;
+  border: 1px solid #960AFE;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 0 10px 0 rgba(150, 10, 254, 0.5), 0 0 10px 0 rgba(150, 10, 254, 0.5);
+          box-shadow: 0 0 10px 0 rgba(150, 10, 254, 0.5), 0 0 10px 0 rgba(150, 10, 254, 0.5);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 10px auto;
 }
-.comming-soon h3:after {
-  position: absolute;
-  content: "";
-  width: 30px;
-  height: 5px;
-  left: 50%;
-  bottom: -10px;
-  background-color: blueviolet;
-  z-index: -1;
-  -webkit-transition: 0.4s ease-in-out;
-  transition: 0.4s ease-in-out;
-  -webkit-animation: comming 2s infinite alternate;
-          animation: comming 2s infinite alternate;
+.comming-soon .soon .image {
+  margin-bottom: 30px;
 }
-.comming-soon .soon img {
+.comming-soon .soon .image img {
+  width: 100%;
   margin: auto;
-  border-radius: 50%;
+  margin-bottom: 10px;
 }
-.comming-soon .soon ul {
+.comming-soon .soon .comming .rate li {
+  margin: 10px;
+}
+.comming-soon .soon .comming .rate li i {
+  color: yellow;
+}
+.comming-soon .soon .comming .time ul {
   margin: 20px auto;
 }
-.comming-soon .soon ul li {
-  margin: 20px;
+.comming-soon .soon .comming .time ul li {
+  margin: 0 10px 30px 0;
   color: #fff;
   background-color: #410882;
   width: 80px;
@@ -524,54 +525,13 @@ header.navbar .active {
       -ms-flex-pack: center;
           justify-content: center;
 }
-.comming-soon .soon ul li p {
+.comming-soon .soon .comming .time ul li p {
   padding: 0;
   margin: 0;
   font-weight: 700;
   font-size: 30px;
 }
 
-@-webkit-keyframes comming {
-  0% {
-    left: 50%;
-    width: 10px;
-    -webkit-box-shadow: 0 0 10px 0 rgba(150, 10, 254, 0.5), 0 0 10px 0 rgba(150, 10, 254, 0.5);
-            box-shadow: 0 0 10px 0 rgba(150, 10, 254, 0.5), 0 0 10px 0 rgba(150, 10, 254, 0.5);
-  }
-  50% {
-    left: 60%;
-    width: 30px;
-    -webkit-box-shadow: none;
-            box-shadow: none;
-  }
-  100% {
-    left: 40%;
-    width: 10px;
-    -webkit-box-shadow: 0 0 10px 0 rgba(150, 10, 254, 0.5), 0 0 10px 0 rgba(150, 10, 254, 0.5);
-            box-shadow: 0 0 10px 0 rgba(150, 10, 254, 0.5), 0 0 10px 0 rgba(150, 10, 254, 0.5);
-  }
-}
-
-@keyframes comming {
-  0% {
-    left: 50%;
-    width: 10px;
-    -webkit-box-shadow: 0 0 10px 0 rgba(150, 10, 254, 0.5), 0 0 10px 0 rgba(150, 10, 254, 0.5);
-            box-shadow: 0 0 10px 0 rgba(150, 10, 254, 0.5), 0 0 10px 0 rgba(150, 10, 254, 0.5);
-  }
-  50% {
-    left: 60%;
-    width: 30px;
-    -webkit-box-shadow: none;
-            box-shadow: none;
-  }
-  100% {
-    left: 40%;
-    width: 10px;
-    -webkit-box-shadow: 0 0 10px 0 rgba(150, 10, 254, 0.5), 0 0 10px 0 rgba(150, 10, 254, 0.5);
-            box-shadow: 0 0 10px 0 rgba(150, 10, 254, 0.5), 0 0 10px 0 rgba(150, 10, 254, 0.5);
-  }
-}
 /*******************************    ens section comming soon    *******************************/
 /*******************************    start Section last-animy    *******************************/
 section.last-animy {
@@ -1182,11 +1142,12 @@ section.my-list-anime .animes .anime .info:hover .do {
 section.info {
   width: 100%;
   height: auto;
-  background: url(../img/animy.png) no-repeat center center;
+  background: url(../img/info.png) no-repeat center center;
   background-size: cover;
   position: relative;
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
+  padding: 100px 0;
 }
 section.info .info-the-anime {
   padding: 20px;
@@ -1226,7 +1187,7 @@ section.info .info-the-anime .desc {
           justify-content: center;
   -webkit-box-align: end;
       -ms-flex-align: end;
-          align-items: end;
+          align-items: flex-end;
   margin-bottom: 5px;
 }
 section.info .info-the-anime .desc h1 {
@@ -1280,8 +1241,8 @@ section.info .info-the-anime .desc ul li {
   }
 }
 section.info .overlay {
-  -webkit-backdrop-filter: blur(2px);
-          backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
 }
 section.info button {
   padding: 10px 40px;

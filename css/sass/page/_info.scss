@@ -1,10 +1,11 @@
 section.info{
     width: 100%;
     height: auto;
-    background: url(../img/animy.png) no-repeat center center;
+    background: url(../img/info.png) no-repeat center center;
     background-size: cover;
     position: relative;
     backdrop-filter: blur(10px);
+    padding: 100px 0;
     .info-the-anime{
         padding: 20px;
         width: 100%;
@@ -42,7 +43,7 @@ section.info{
         .desc{
             display: flex;
             justify-content: center;
-            align-items: end;
+            align-items: flex-end;
             margin-bottom: 5px;
             h1{
                 font-size: 26px;
@@ -99,8 +100,7 @@ section.info{
         }
     }
     .overlay{
-
-        backdrop-filter: blur(2px);
+        backdrop-filter: blur(10px);
     }
     button{
         padding: 10px 40px;

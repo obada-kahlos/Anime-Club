@@ -119,66 +119,58 @@
 
 .comming-soon{
     h3{
-        position: relative;
-        transition: 0.4s;
-        z-index: 999;
-        &:after{
-            position: absolute;
-            content: '';
-            width: 30px;
-            height: 5px;
-            left: 50%;
-            bottom : -10px;
-            background-color: blueviolet;
-            z-index: -1;
-            transition: 0.4s ease-in-out;
-            animation: comming 2s infinite alternate;
-        }
+        padding: 10px;
+        border: 1px solid $color-three;
+        border-radius: 4px;
+        box-shadow: 0 0 10px 0 rgba(150,10,254,0.5), 0 0 10px 0 rgba(150,10,254,0.5);
+        width: fit-content;
+        margin: 10px auto;
     }
     .soon{
-        img{
-            margin: auto;
-            border-radius: 50%;
-        }
-        ul{
-            margin: 20px auto;
-            li{
-                margin: 20px;
-                color: #fff;
-                background-color: #410882;
-                width: 80px;
-                height: 80px;
-                border-radius: 5px;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                p{
-                    padding: 0;
-                    margin: 0;
-                    font-weight: 700;
-                    font-size: 30px;
-                }
+        .image{
+            margin-bottom: 30px;
+            img{
+                width: 100%;
+                margin: auto;
+                margin-bottom: 10px;
             }
         }
-    }
-}
 
-@keyframes comming{
-    0%{
-        left : 50%;
-        width: 10px;
-        box-shadow: 0 0 10px 0 rgba(150,10,254,0.5), 0 0 10px 0 rgba(150,10,254,0.5);
-    }
-    50%{
-        left : 60%;
-        width: 30px;
-        box-shadow: none;
-    }
-    100%{
-        left : 40%;
-        width: 10px;
-        box-shadow: 0 0 10px 0 rgba(150,10,254,0.5), 0 0 10px 0 rgba(150,10,254,0.5);
+        .comming{
+            .rate{
+                li{
+                    margin: 10px;
+                    i{
+                        color: yellow;
+                    }
+                }
+            }
+            .time{
+                ul{
+                    margin: 20px auto;
+                    li{
+                        margin: 0 10px 30px 0;
+                        color: #fff;
+                        background-color: #410882;
+                        width: 80px;
+                        height: 80px;
+                        border-radius: 5px;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        p{
+                            padding: 0;
+                            margin: 0;
+                            font-weight: 700;
+                            font-size: 30px;
+                        }
+                    }
+                }
+            }
+              
+        }
+
     }
 }
 
