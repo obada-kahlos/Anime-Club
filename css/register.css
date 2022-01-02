@@ -279,8 +279,25 @@ li {
   margin-right: 20px;
 }
 @media (max-width: 767px) {
-  .top-nav {
+  .top-nav .login h5 {
+    font-size: 16px;
+    margin-left: 5px;
+  }
+  .top-nav .login h5 a {
+    color: #ddd;
+  }
+  .top-nav .contact p {
     display: none;
+  }
+  .top-nav .contact ul {
+    display: inline;
+  }
+  .top-nav .contact ul li {
+    display: inline;
+    width: 20px;
+    height: 20px;
+    color: #fff;
+    margin-right: 5px;
   }
 }
 
@@ -344,7 +361,7 @@ header.navbar .container .form form .search i {
   right: 10px;
   cursor: pointer;
 }
-@media (max-width: 767px) {
+@media (max-width: 565px) {
   header.navbar .container .form form .search input[type=text] {
     width: 200px;
     margin-top: 3px;

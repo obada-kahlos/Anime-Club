@@ -35,7 +35,30 @@
         }
     }
     @media (max-width : 767px){
-        display: none;
+        .login{
+            h5{
+                font-size: 16px;
+                margin-left: 5px;
+                a{
+                    color: #ddd;
+                }
+            }
+        }
+        .contact{
+            p{
+                display: none;
+            }
+            ul{
+                display: inline;
+                li{
+                    display: inline;
+                    width: 20px;
+                    height: 20px;
+                    color: #fff;
+                    margin-right: 5px;
+                }
+            }
+        }
     }
 }
 
@@ -90,8 +113,7 @@ header.navbar{
                     cursor: pointer;
                 }   
             }
-            @media(max-width : 767px){
-                
+            @media(max-width : 565px){
                 .search{
                     input[type="text"]{
                         width: 200px;
