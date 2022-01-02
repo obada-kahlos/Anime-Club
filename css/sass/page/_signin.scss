@@ -4,11 +4,14 @@
 section{
     .register{
         margin-top: 20px;
-        background-image: linear-gradient(to right , #960AFE 0% , #4f2470 100%);
         width: 100%;
+        background-color: rgba(149, 11, 254,0.4);
+        backdrop-filter: blur(10px);
         height: calc(100vh-120px);
         padding: 0;
         border-radius: 10px;
+        position: relative;
+        z-index: 4;
         .sign-up{
             padding: 20px;
             ul{

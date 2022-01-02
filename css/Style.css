@@ -82,6 +82,8 @@ li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
+  z-index: 999;
 }
 .top-nav .login h5 {
   color: #ddd;
@@ -1261,11 +1263,11 @@ section.info .info-the-anime .desc ul li {
   }
 }
 section.info .overlay {
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
 }
 section.info button {
-  padding: 10px 40px;
+  padding: 10px 17px;
   margin: 10px 0;
   margin-right: 10px;
   border-radius: 4px;
@@ -1273,6 +1275,9 @@ section.info button {
   background-color: rgba(255, 255, 255, 0.1);
   -webkit-transition: 0.3s ease-out;
   transition: 0.3s ease-out;
+}
+section.info button i {
+  margin-left: 10px;
 }
 section.info button:hover {
   background-color: #960AFE;
@@ -1459,12 +1464,15 @@ section.info button:hover {
 
 section .register {
   margin-top: 20px;
-  background-image: -webkit-gradient(linear, left top, right top, from(#960AFE), to(#4f2470));
-  background-image: linear-gradient(to right, #960AFE 0%, #4f2470 100%);
   width: 100%;
+  background-color: rgba(149, 11, 254, 0.4);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
   height: calc(100vh-120px);
   padding: 0;
   border-radius: 10px;
+  position: relative;
+  z-index: 4;
 }
 section .register .sign-up {
   padding: 20px;

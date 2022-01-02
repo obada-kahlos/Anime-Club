@@ -100,16 +100,19 @@ section.info{
         }
     }
     .overlay{
-        backdrop-filter: blur(10px);
+        backdrop-filter: blur(4px);
     }
     button{
-        padding: 10px 40px;
+        padding: 10px 17px;
         margin: 10px 0;
         margin-right: 10px;
         border-radius: 4px;
         color: #fff;
         background-color: rgba(255,255,255,0.1);
         transition: 0.3s ease-out;
+        i{
+            margin-left: 10px;
+        }
         &:hover{
             background-color: $color-three;
             box-shadow: 0 0 30px 0 rgba(209, 22, 209,0.1) ,  0 0 50px 0 rgba(209, 22, 209,0.2);

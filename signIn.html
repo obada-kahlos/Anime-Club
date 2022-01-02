@@ -16,6 +16,57 @@
     <link rel="stylesheet" href="css/bootsrtap.5.1.0.css">
     <link rel="stylesheet" href="node_modules/hover.css/css/hover.css">
     <link rel="stylesheet" href="css/Style.css">
+    <style>
+         body:after {
+            position: absolute;
+            content: '';
+            top: 40px;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(#600c68, #3b0366);
+            clip-path: circle(20% at left 50%);
+            z-index: 1;
+        }
+
+        body::before {
+            position: absolute;
+            content: '';
+            top: -40px;
+            right: 10;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(#600c68, #3b0366);
+            clip-path: circle(20% at center 30%);
+            z-index: 1;
+        }
+
+        @media (max-width: 676px) {
+            body:after {
+                position: absolute;
+                content: '';
+                top: -20px;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(#600c68, #3b0366);
+                clip-path: circle(20% at right 50%);
+                z-index: 1;
+            }
+            body::before {
+                position: absolute;
+                content: '';
+                top: 240px;
+                right: 10;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(#600c68, #3b0366);
+                clip-path: circle(20% at center 30%);
+                z-index: 1;
+            }
+
+        }
+    </style>
 
 </head>
 
@@ -133,6 +184,21 @@
 
             <di  v class="row">
 
+                <div class="col-md-6 col-12 join d-flex justify-content-center align-items-center text-center">
+                    <div>
+                        <h4> Join Us To </h4>
+                        <h2> Anime Club </h2>
+                        <p> Watch anime on time, fast and with high accuracy </p>
+
+                        <ul class="list-unstyle">
+                            <li> <i class="fa fa-facebook"></i> </li>
+                            <li> <i class="fa fa-whatsapp"></i> </li>
+                            <li> <i class="fa fa-instagram"></i> </li>
+                            <li> <i class="fa fa-twitter"></i> </li>
+                        </ul>
+                    </div>
+                </div>
+
                 <div class="col-md-6 col-12">
                     <div class="sign-up">
 
@@ -158,23 +224,6 @@
                         </form>
 
     
-                    </div>
-                </div>
-                
-
-
-                <div class="col-md-6 col-12 join d-flex justify-content-center align-items-center text-center">
-                    <div>
-                        <h4> Join Us To </h4>
-                        <h2> Anime Club </h2>
-                        <p> Watch anime on time, fast and with high accuracy </p>
-
-                        <ul class="list-unstyle">
-                            <li> <i class="fa fa-facebook"></i> </li>
-                            <li> <i class="fa fa-whatsapp"></i> </li>
-                            <li> <i class="fa fa-instagram"></i> </li>
-                            <li> <i class="fa fa-twitter"></i> </li>
-                        </ul>
                     </div>
                 </div>
 

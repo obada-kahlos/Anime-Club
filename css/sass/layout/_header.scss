@@ -6,6 +6,8 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    position: relative;
+    z-index: 999;
     .login{
         h5{
             color: #ddd;

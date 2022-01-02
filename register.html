@@ -17,7 +17,57 @@
     <link rel="stylesheet" href="node_modules/hover.css/css/hover.css">
     <link rel="stylesheet" href="css/Style.css">
     <link rel="stylesheet" href="css/register.css">
+    <style>
+    body:after {
+            position: absolute;
+            content: '';
+            top: 40px;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(#600c68, #3b0366);
+            clip-path: circle(20% at right 50%);
+            z-index: 9;
+        }
+        
+        body::before {
+            position: absolute;
+            content: '';
+            top: 40px;
+            right: 10;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(#600c68, #3b0366);
+            clip-path: circle(20% at center 30%);
+            z-index: 1;
+        }
 
+        @media (max-width: 676px) {
+            body:after {
+                position: absolute;
+                content: '';
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(#600c68, #3b0366);
+                clip-path: circle(20% at right 50%);
+                z-index: 9;
+            }
+            body::before {
+                position: absolute;
+                content: '';
+                top: 400px;
+                right: 10;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(#600c68, #3b0366);
+                clip-path: circle(20% at center 30%);
+                z-index: 1;
+            }
+        }
+    </style>
+    
 </head>
 
 <body>
