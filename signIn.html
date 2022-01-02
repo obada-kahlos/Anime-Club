@@ -129,53 +129,32 @@
     </header>
 
 
-
     <section>
         <div class="container register">
 
-            <div class="d-md-flex justify-content-between aligin-items-center">
+            <div class="d-md-flex justify-content-between align-items-center">
 
                 <div class="">
                     <div class="sign-up">
 
                         <ul class="list-unstyled sign">
-                            <li><a href="#" class="signup active"> Sign Up </a></li>
-                            <li><a href="signIn.html" class="signin"> Sign In </a></li>
+                            <li><a href="register.html" class="signup"> Sign Up </a></li>
+                            <li><a href="#" class="signin active"> Sign In </a></li>
                         </ul>
     
                         <form action="#">
-    
-                            <div class="row">
-    
-                                <div class="col-md-6">
-                                    <label for="firstname"> First Name </label>
-                                    <input type="text" name="" id="firstname">
-                                </div>
-    
-                                <div class="col-md-6">
-                                    <label for="lastname"> Last Name </label>
-                                    <input type="text" name="" id="lastname">
-                                </div>
-    
-                                <div class="col-md-12">
-                                    <label for="email"> Email </label>
-                                    <input type="email" name="" id="email">
-                                </div>
-    
-                                <div class="col-md-6">
-                                    <label for="Password"> Password </label>
-                                    <input type="password" name="" id="Password">
-                                </div>
-    
-                                <div class="col-md-6">
-                                    <label for="number"> Number </label>
-                                    <input type="number" name="" id="number">
-                                </div>
-    
-    
-    
+
+                            <div class="">
+                                <label for="email"> Email </label>
+                                <input type="email" name="" id="email">
                             </div>
-    
+
+                            <div class="">
+                                <label for="password"> password </label>
+                                <input type="password" name="" id="password">
+                            </div>
+
+
                             <button type="submit" class="btn-sign hvr-buzz-out"> Sign Up </button>
                         </form>
 
@@ -221,18 +200,6 @@
                 $(".btn").toggleClass("toggle");
             })
         })
-
-
-        let list = document.querySelector('.sign ul li');
-        list.foreach(function (ele) {
-            ele.onclick = function () {
-                list.foreach = (function (ele) {
-                    ele.classList.remove('active')
-                });
-                this.classList.add('active');
-            }
-        })
-
     </script>
 </body>
 
