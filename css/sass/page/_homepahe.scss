@@ -460,7 +460,7 @@ section.fixed-anime{
             }
         }
     }
-   @media(max-width : 767px){
+   @media(max-width : 676px){
     .container{
         h3{
             font-size: 18px;
@@ -472,10 +472,11 @@ section.fixed-anime{
             ul{
                 margin: 30px 0;
                 padding: 0;
-                li{
+                li.btn-hover{
                     margin: 0;
+                    margin-bottom: 10px;
                     border-radius: 0;
-                    padding: 3px 6px;
+                    padding: 3px 4px;
                     font-size: 14px;
                 }
             }
@@ -503,7 +504,7 @@ section.fixed-anime{
 
 .anime{
     overflow: hidden;
-    img:hover{
+    &:hover img{
         transition: 0.3s;
         transform: scale(1.1) rotate(5deg);
     }

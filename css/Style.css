@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Licorice&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -161,6 +162,7 @@ header.navbar .container {
 header.navbar .container .logo h3 {
   color: #fff;
   font-size: 26px;
+  font-family: "Licorice", cursive;
 }
 header.navbar .container .logo h3::first-letter {
   font-size: 33px;
@@ -836,7 +838,7 @@ section.fixed-anime .fix-anime .anime .text p {
 .type-anime .container .type-anime .text i {
   color: yellow;
 }
-@media (max-width: 767px) {
+@media (max-width: 676px) {
   .type-anime .container h3 {
     font-size: 18px;
   }
@@ -847,10 +849,11 @@ section.fixed-anime .fix-anime .anime .text p {
     margin: 30px 0;
     padding: 0;
   }
-  .type-anime .container .types ul li {
+  .type-anime .container .types ul li.btn-hover {
     margin: 0;
+    margin-bottom: 10px;
     border-radius: 0;
-    padding: 3px 6px;
+    padding: 3px 4px;
     font-size: 14px;
   }
 }
@@ -868,7 +871,7 @@ section.fixed-anime .fix-anime .anime .text p {
 .anime {
   overflow: hidden;
 }
-.anime img:hover {
+.anime:hover img {
   -webkit-transition: 0.3s;
   transition: 0.3s;
   -webkit-transform: scale(1.1) rotate(5deg);

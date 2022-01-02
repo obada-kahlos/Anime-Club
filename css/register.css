@@ -333,6 +333,7 @@ header.navbar .container {
 header.navbar .container .logo h3 {
   color: #fff;
   font-size: 26px;
+  font-family: "Licorice", cursive;
 }
 header.navbar .container .logo h3::first-letter {
   font-size: 33px;
