@@ -132,58 +132,60 @@
     <section>
         <div class="container register">
 
-            <div class="row">
+            <div class="d-md-flex justify-content-between aligin-items-center">
 
-                <div class="col-md-7 col-12">
+                <div class="">
                     <div class="sign-up">
 
                         <ul class="list-unstyled sign">
                             <li><a href="#" class="signup active"> Sign Up </a></li>
                             <li><a href="#" class="signin"> Sign In </a></li>
                         </ul>
-
+    
                         <form action="#">
-
+    
                             <div class="row">
-
+    
                                 <div class="col-md-6">
                                     <label for="firstname"> First Name </label>
                                     <input type="text" name="" id="firstname">
                                 </div>
-
+    
                                 <div class="col-md-6">
                                     <label for="lastname"> Last Name </label>
                                     <input type="text" name="" id="lastname">
                                 </div>
-
+    
                                 <div class="col-md-12">
                                     <label for="email"> Email </label>
                                     <input type="email" name="" id="email">
                                 </div>
-
+    
                                 <div class="col-md-6">
                                     <label for="Password"> Password </label>
                                     <input type="password" name="" id="Password">
                                 </div>
-
+    
                                 <div class="col-md-6">
                                     <label for="number"> Number </label>
                                     <input type="number" name="" id="number">
                                 </div>
-
-
-
+    
+    
+    
                             </div>
-
+    
                             <button type="submit" class="btn-sign hvr-buzz-out"> Sign Up </button>
                         </form>
 
+    
                     </div>
                 </div>
+                
 
-                <div class="col-md-5 col-12 d-flex justify-content-center align-items-center text-center">
 
-                    <div class="join">
+                <div class="join d-flex justify-content-center align-items-center text-center">
+                    <div>
                         <h4> Join Us To </h4>
                         <h2> Anime Club </h2>
                         <p> Watch anime on time, fast and with high accuracy </p>
@@ -195,8 +197,6 @@
                             <li> <i class="fa fa-twitter"></i> </li>
                         </ul>
                     </div>
-
-
                 </div>
 
             </div>
@@ -221,35 +221,16 @@
             })
         })
 
-        let signIn = document.querySelector('.signin');
-        console.log(signIn);
-        let signUp = document.querySelector('.signup');
-        console.log(signUp);
-
 
         let list = document.querySelector('.sign ul li');
-        console.log(list)
         list.foreach(function (ele) {
-
             ele.onclick = function () {
                 list.foreach = (function (ele) {
                     ele.classList.remove('active')
                 });
                 this.classList.add('active');
             }
-
         })
-
-
-        let sin = document.querySelector('.signin');
-        let register = document.querySelector('.register');
-        sin.onclick = function () {
-
-            register.classList.add('d-flex ')
-
-        }
-
-
 
     </script>
 </body>

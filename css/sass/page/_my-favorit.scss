@@ -21,48 +21,88 @@
          position: relative;
          img{
              width: 100%;
-             transition: 0.4s;
+             margin-bottom: 20px;
              opacity: 0.9;
-             &:hover{
-                 opacity: 0.6;
-             }
-         }
-         .info{
-             position: absolute;
-             bottom: 0;
-             left: 0;
-             width: 88%;
-             margin-left: 11px;
-             text-align: center;
-             padding: 10px;
-             background-color: rgba(0,0,0,0.2);
-             h5{
-                 margin: 0;
-                 color: #fff; 
-                 font-size: 18px;
-             }
-             p{
-                 margin: 0;
-                 color: #fff;
-                 font-size: 16px;
-                 i{
-                     color: yellow;
-                 }
-             }
-             
-         }
-     }
+        }
+    }
 
-    @media (max-width : 767px){
+}
+
+
+.add-another-character{
+    display: none;
+    margin: 50px auto;
+    transition: 0.4s ease-in;
+    .search{
+        position: relative;
+        margin-bottom: 40px;
+        width: 50%;
+        h3{
+            margin-bottom: 20px;
+        }
+        input{
+            width: 100%;
+            padding: 10px;
+            border: 1px solid $color-three;
+            background-color: $color-one ;
+            color: #fff;
+            border-radius: 5px;
+        }
+        span{
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer; 
+            i{
+                color: $color-three;
+                width: 22px;
+            }
+        }
+    }
+
+    .add-character{
+        position: relative;
+        overflow: hidden;
         img{
             width: 100%;
-            height: 240px;
-            margin: 20px 0;
+            height: 100%;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+        .add{
+            position: absolute;
+            width: 0;
+            height: calc(100% - 20px);
+            top: 0;
+            left: -20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(0,0,0,0.6);
+            transition: 0.4s;
+            p{
+                width: 50px;
+                height: 50px;
+                line-height: 50px;
+                text-align: center;
+                border-radius: 100%;
+                background-color: rgba(0,0,0,0.4);
+                cursor: pointer;
+                font-size: 22px;
+                
+                i{
+                    color: #fff;
+                }
+            }
+        }
+        &:hover .add{
+            width: 100%;
+            left: 0;
         }
     }
 }
 
-.add{
+.add-more{
     position: fixed;
     bottom: 40px;
     right: 40px;
@@ -74,5 +114,12 @@
         background-color: $color-three;
         box-shadow: 0 0 30px 0 #960AFE ,  0 0 30px 0 #960AFE;
         border-radius: 10px;
+    }
+    @media (max-width : 676px){
+        button{
+            width: 80px;
+            padding: 8px 15px;
+            box-shadow: 0 0 20px 0 #960AFE ,  0 0 20px 0 #960AFE;
+        }
     }
 }

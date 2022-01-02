@@ -132,14 +132,11 @@
 
         <div class="container">
             <h3 class="text-white mb-5"> <span> My Favorit </span> A Personality </h3>
-            <div class="row">
+            <div class="row" id="favorit">
 
                 <div class="col-lg-2 col-md-3 col-sm-4 col-6 col-no-padding col-mobile-no-padding anime-character">
                     <img src="img/fkilua.png" class="rounded" alt="">
                     <div class="info">
-                        <h5> Hunter X Hunter </h5>
-                        <p> killua </p>
-                        <p> <i class="fa fa-star"></i> 9.1 </p>
                     </div>
                 </div>
 
@@ -147,27 +144,72 @@
                 <div class="col-lg-2 col-md-3 col-sm-4 col-6 col-no-padding col-mobile-no-padding anime-character">
                     <img src="img/flifai.png" class="rounded" alt="">
                     <div class="info">
-                        <h5> Attac om Titan </h5>
-                        <p> Live </p>
-                        <p> <i class="fa fa-star"></i> 10 </p>
                     </div>
                 </div>
 
                 <div class="col-lg-2 col-md-3 col-sm-4 col-6 col-no-padding col-mobile-no-padding anime-character">
                     <img src="img/fMikasa.png" class="rounded" alt="">
                     <div class="info">
-                        <h5> Attac om Titan </h5>
-                        <p> Mikasa </p>
-                        <p> <i class="fa fa-star"></i> 9.6 </p>
                     </div>
                 </div>
 
                 <div class="col-lg-2 col-md-3 col-sm-4 col-6 col-no-padding col-mobile-no-padding anime-character">
                     <img src="img/fitachi.png" class="rounded" alt="">
                     <div class="info">
-                        <h5> Naruto </h5>
-                        <p> Itachi </p>
-                        <p> <i class="fa fa-star"></i> 10.1 </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <section class="add-another-character">
+
+        <div class="container">
+            
+            <h5 class="text-white mb-3"> Searh For Charactre You Love</h5>
+            <div class="search">
+                <input type="text">
+                <span> <i class="fa fa-search"></i> </span>
+            </div>
+            
+            <div class="row" id="addnewone">
+
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6 col-no-padding col-mobile-no-padding add-new">
+                    <div class="add-character">
+                        <img src="img/fkilua.png" class="rounded" alt="">
+                        <div class="add">
+                            <p id="p"> <i class="fa fa-plus"></i> </p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6 col-no-padding col-mobile-no-padding add-new">
+                    <div class="add-character">
+                        <img src="img/flifai.png" class="rounded" alt="">
+                        <div class="add">
+                            <p> <i class="fa fa-plus"></i> </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6 col-no-padding col-mobile-no-padding add-new">
+                    <div class="add-character">
+                        <img src="img/fitachi.png" class="rounded" alt="">
+                        <div class="add">
+                            <p> <i class="fa fa-plus"></i> </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6 col-no-padding col-mobile-no-padding add-new">
+                    <div class="add-character">
+                        <img src="img/fMikasa.png" class="rounded" alt="">
+                        <div class="add">
+                            <p id="btnnn"> <i class="fa fa-plus"></i> </p>
+                        </div>
                     </div>
                 </div>
 
@@ -178,7 +220,7 @@
 
 
 
-    <div class="add hvr-bob">
+    <div class="add-more hvr-bob">
         <button> <i class="fa fa-plus"></i> </button>
     </div>
 
@@ -195,7 +237,16 @@
         $("header button").on("click", function () {
             $(".side-bar").toggleClass("active");
             $(".btn").toggleClass("toggle");
-        })
+        });
+        /////////////////////////////////////////////////////////////////////////////// Add more Anime
+        let btnAdd = document.querySelector('.add-more');
+        let listAnime = document.querySelector('.add-another-character')
+
+        btnAdd.onclick = function() {
+            listAnime.style = "display : block";
+            btnAdd.style = "display : none";
+        }
+
     </script>
 </body>
 

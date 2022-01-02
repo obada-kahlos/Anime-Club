@@ -233,8 +233,9 @@ li {
 
 .btn-sign {
   padding: 8px 30px;
-  background-color: #960AFE;
-  color: #fff;
+  background-color: #fff;
+  color: #960AFE;
+  font-weight: bold;
   border-radius: 6px;
   margin-top: 10px;
 }
@@ -434,6 +435,8 @@ header.navbar .container .sidebar-btn .btn.toggle span::after {
   }
 }
 header.navbar .side-bar {
+  position: relative;
+  z-index: 999;
   overflow: hidden;
   height: 100%;
   position: fixed;
@@ -535,76 +538,88 @@ header.navbar .active {
   top: 70px;
 }
 
+* {
+  font-family: sans-serif;
+}
+
 section .register {
-  margin: 100px auto;
-  background-color: #960AFE;
+  margin-top: 20px;
+  background-image: -webkit-gradient(linear, left top, right top, from(#960AFE), to(#4f2470));
+  background-image: linear-gradient(to right, #960AFE 0%, #4f2470 100%);
   width: 100%;
   height: calc(100vh-120px);
-}
-section .register .row .col-md-7 {
   padding: 0;
+  border-radius: 10px;
 }
-section .register .row .col-md-7 .sign-up {
+section .register .sign-up {
+  width: 100%;
   padding: 20px;
-  background-color: #fff;
-  height: 120%;
-  margin-bottom: 40px;
-  margin-top: -45px;
-  -webkit-box-shadow: 0 0px 10px 0 rgba(255, 255, 255, 0.2), 0 0px 20px 0 rgba(255, 255, 255, 0.19);
-          box-shadow: 0 0px 10px 0 rgba(255, 255, 255, 0.2), 0 0px 20px 0 rgba(255, 255, 255, 0.19);
 }
-section .register .row .col-md-7 .sign-up ul li {
+section .register .sign-up ul li {
   margin: 20px 20px 20px 0;
   -webkit-transition: 0.4s ease-out;
   transition: 0.4s ease-out;
 }
-section .register .row .col-md-7 .sign-up ul li a {
-  color: #111;
+section .register .sign-up ul li a {
+  color: #fff;
   font-size: 26px;
   font-weight: 600;
 }
-section .register .row .col-md-7 .sign-up ul li a.active {
-  color: #960AFE;
-  border-bottom: 2px solid #960AFE;
+section .register .sign-up ul li a.active {
+  color: #fff;
+  border-bottom: 2px solid #fff;
 }
-section .register .row .col-md-7 .sign-up form {
+section .register .sign-up .or p {
+  text-align: #333;
+  font-weight: 600;
+  text-align: center;
+  font-size: 24px;
+}
+section .register .sign-up .or p ul li {
+  padding: 10px 20px;
+  font-size: 22px;
+  background-color: red;
+}
+section .register .sign-up form {
   margin-top: 20px;
 }
-section .register .row .col-md-7 .sign-up form label {
+section .register .sign-up form label {
   display: block;
-  color: #111;
+  color: #fff;
   font-size: 18px;
   margin-bottom: 10px;
 }
-section .register .row .col-md-7 .sign-up form input {
+section .register .sign-up form input {
   width: 100%;
   padding: 10px;
-  border: 1px solid #111;
+  border: 1px solid #fff;
   margin-bottom: 10px;
+  color: #333;
+  border-radius: 4px;
 }
-section .register .row .col-md-5 .join {
+section .register .join {
   width: 100%;
 }
-section .register .row .col-md-5 .join h4 {
+section .register .join h4 {
   color: #fff;
   margin-bottom: 0;
   font-size: 22px;
 }
-section .register .row .col-md-5 .join h2 {
+section .register .join h2 {
   font-size: 30px;
   color: #fff;
   font-weight: bold;
   margin-bottom: 10px;
 }
-section .register .row .col-md-5 .join p {
+section .register .join p {
   margin-bottom: 10px;
   color: #fff;
 }
-section .register .row .col-md-5 .join ul {
+section .register .join ul {
   padding: 0;
   margin: 0;
 }
-section .register .row .col-md-5 .join ul li {
+section .register .join ul li {
   background-color: #fff;
   width: 40px;
   height: 40px;
@@ -613,6 +628,34 @@ section .register .row .col-md-5 .join ul li {
   line-height: 40px;
   text-align: center;
   cursor: pointer;
+  margin: 10px;
+}
+@media (max-width: 565px) {
+  section .register {
+    border-radius: 0;
+  }
+  section .register .sign-up {
+    padding: 20px;
+    margin-bottom: 30px;
+  }
+  section .register .join {
+    padding: 30px;
+    padding-bottom: 60px;
+  }
+  section .register .join h2 {
+    font-size: 36px;
+  }
+  section .register .join ul li {
+    background-color: #fff;
+    width: 50px;
+    height: 50px;
+    color: #111;
+    border-radius: 50%;
+    line-height: 50px;
+    text-align: center;
+    margin: 5px;
+    cursor: pointer;
+  }
 }
 
 @media (max-width: 767px) {

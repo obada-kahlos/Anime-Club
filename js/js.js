@@ -114,17 +114,10 @@ for(let i = 0 ; i<list.length ; i++){
 // });
 
 // list.forEach(function(ele){
-
 //   ele.onclick(function(){
-
 //     fillter.classList.add('.hide');
-
 //   })
-
-
 // })
-
-
 
 
 /////////////////////////////////////////////////////////////////////////////// top button  and fixed scroll and sidbar
@@ -137,12 +130,16 @@ window.onscroll = function () {
     btn.classList.add('show-btn-top');
   } else if (this.scrollY > 0) {
     nav.classList.add('slide-down');
+    nav.style = "background-color: rgba(42 ,48 ,60,1);";
     sidbar.classList.add('side-bar-scroll');
+    sidbar.style = "top : 70px";
   }
   else {
     btn.classList.remove('show-btn-top');
     nav.classList.remove('slide-down');
     sidbar.classList.remove('side-bar-scroll');
+    nav.style = "background-color: rgba(42 ,48 ,60,0.9);";
+    sidbar.style = "top : 50px";
   }
 }
 
@@ -152,3 +149,5 @@ btn.onclick = function () {
     behavior: "smooth",
   });
 };
+
+

@@ -170,8 +170,9 @@
 
 .btn-sign{
     padding: 8px 30px;
-    background-color: $color-three;
-    color: #fff;
+    background-color: #fff;
+    color: $color-three;
+    font-weight: bold;
     border-radius: 6px;
     margin-top: 10px;
 }
