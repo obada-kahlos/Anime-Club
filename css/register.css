@@ -571,7 +571,7 @@ section .register {
   border-radius: 10px;
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
-  z-index: 999;
+  z-index: 10;
   position: relative;
 }
 section .register .sign-up {
