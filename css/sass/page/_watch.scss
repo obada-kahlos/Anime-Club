@@ -13,10 +13,7 @@
         }
     }
     .next-priv{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 20px;
+        margin-top: 20px;
         button{
             padding: 10px 20px;
             border-radius: 5px;
@@ -32,6 +29,27 @@
             background-color: $color-one;
             border: 1px solid $color-three;
         }
+        .pagination {
+            display: inline-block;
+          }
+          
+          .pagination a {
+            color: #fff;
+            float: left;
+            padding: 8px 16px;
+            text-decoration: none;
+            transition: background-color .3s;
+            border: 1px solid #fff;
+            margin: 5px;
+          }
+          
+          .pagination a.active {
+            background-color: $color-three;
+            color: white;
+            border: 1px solid $color-three;
+          }
+          
+          .pagination a:hover:not(.active) {background-color: $color-three;}
     }
 
     .dawonlad{

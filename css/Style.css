@@ -877,6 +877,7 @@ section.error {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
+  margin-bottom: 50px;
 }
 section.error div {
   color: #fff;
@@ -1167,16 +1168,7 @@ section.my-list-anime .animes .anime .info:hover .do {
   cursor: pointer;
 }
 .watch-anime .next-priv {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 20px;
+  margin-top: 20px;
 }
 .watch-anime .next-priv button {
   padding: 10px 20px;
@@ -1192,6 +1184,27 @@ section.my-list-anime .animes .anime .info:hover .do {
   color: #fff;
   background-color: #110E17;
   border: 1px solid #960AFE;
+}
+.watch-anime .next-priv .pagination {
+  display: inline-block;
+}
+.watch-anime .next-priv .pagination a {
+  color: #fff;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+  border: 1px solid #fff;
+  margin: 5px;
+}
+.watch-anime .next-priv .pagination a.active {
+  background-color: #960AFE;
+  color: white;
+  border: 1px solid #960AFE;
+}
+.watch-anime .next-priv .pagination a:hover:not(.active) {
+  background-color: #960AFE;
 }
 .watch-anime .dawonlad {
   width: 100%;
