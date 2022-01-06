@@ -492,11 +492,64 @@ section.fixed-anime{
 
 
 
-/*******************************    End Section type-animy   *******************************/
+/*******************************    start Section error 404   *******************************/
+section.error{
+    width: 500px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    div{
+        color: #fff;
+        h1{
+            font-size: 100px;
+            letter-spacing: 15px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            transition: all 0.4s ease-in-out;
+            animation: move 3s infinite alternate;
+        }
+        h2{
+            font-size: 40px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        p{
+            margin-top: 30px;
+            margin-bottom: 10px;
+            font-size: 22px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        button{
+            padding: 10px 20px;
+            text-align: center;
+            color: #fff;
+            font-weight: bold;
+            background-color: rgba(0,0,0,0.1);
+            border: 1px solid #fff;
+            cursor: pointer;
+            margin-top: 20px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+    }
+    .overlay{
+        background-color: rgba(0,0,0,0.4);
+    }
+
+@keyframes move {
+    from{
+        transform: translateX(-20px);
+        opacity: 0.7;
+    }
+    to{
+        transform: translateX(30px);
+        opacity: 1;
+    }
+}
+
+}
 
 
-
-/*******************************    End Section fixed-anime   *******************************/
+/*******************************    End Section error 404   *******************************/
 .alert{
     background-color: $color-one;
     border: 1px solid $color-three;
@@ -509,4 +562,7 @@ section.fixed-anime{
         transform: scale(1.1) rotate(5deg);
     }
 }
+
+
+
 

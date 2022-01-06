@@ -863,8 +863,83 @@ section.fixed-anime .fix-anime .anime .text p {
   display: none;
 }
 
-/*******************************    End Section type-animy   *******************************/
-/*******************************    End Section fixed-anime   *******************************/
+/*******************************    start Section error 404   *******************************/
+section.error {
+  width: 500px;
+  height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+section.error div {
+  color: #fff;
+}
+section.error div h1 {
+  font-size: 100px;
+  letter-spacing: 15px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  -webkit-animation: move 3s infinite alternate;
+          animation: move 3s infinite alternate;
+}
+section.error div h2 {
+  font-size: 40px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+section.error div p {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-size: 22px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+section.error div button {
+  padding: 10px 20px;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.1);
+  border: 1px solid #fff;
+  cursor: pointer;
+  margin-top: 20px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+section.error .overlay {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+@-webkit-keyframes move {
+  from {
+    -webkit-transform: translateX(-20px);
+            transform: translateX(-20px);
+    opacity: 0.7;
+  }
+  to {
+    -webkit-transform: translateX(30px);
+            transform: translateX(30px);
+    opacity: 1;
+  }
+}
+@keyframes move {
+  from {
+    -webkit-transform: translateX(-20px);
+            transform: translateX(-20px);
+    opacity: 0.7;
+  }
+  to {
+    -webkit-transform: translateX(30px);
+            transform: translateX(30px);
+    opacity: 1;
+  }
+}
+
+/*******************************    End Section error 404   *******************************/
 .alert {
   background-color: #110E17;
   border: 1px solid #960AFE;
